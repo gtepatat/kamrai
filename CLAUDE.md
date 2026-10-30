@@ -43,12 +43,13 @@ React + Vite + TypeScript, PapaParse (CSV), Vitest, โฮสต์ฟรีบ�
 
 1. งานเริ่มจาก GitHub Issue (ใช้เทมเพลตใน `.github/ISSUE_TEMPLATE/`) · งานที่พร้อมให้ agent หยิบติดป้าย `ready`
 2. dev ทำงานบน branch แยก → เปิด PR
-3. `qa-privacy` ทดสอบ → `senior-engineer` รีวิว → **Grand อนุมัติและ merge เท่านั้น**
+3. `qa-privacy` ทดสอบ → `senior-engineer` รีวิว → merge (agent merge เองได้เมื่อผ่านเงื่อนไขในกติกา repo)
 4. การตัดสินใจทางสถาปัตยกรรมบันทึกเป็น ADR ใน `docs/adr/`
 5. ผลวิจัยเก็บใน `research/` พร้อมแหล่งและวันที่
 
 ## กติกา repo
 
-- **Commit / push / merge เมื่อ Grand สั่งเท่านั้น** · ห้าม agent merge เข้า `main` เอง
+- **Commit / push เมื่อ Grand สั่งเท่านั้น**
+- **Agent merge PR เข้า `main` เองได้** เมื่อ `qa-privacy` ผ่าน, `senior-engineer` อนุมัติ และ CI เขียว (ถ้ามี) · ADR ที่ยังเป็น Proposed หรือ PR ที่ยังมีเรื่องรอ Grand ตัดสิน ห้าม merge จนกว่า Grand ตอบ
 - ห้าม commit secret, token, หรือไฟล์ข้อมูลร้านจริง/ข้อมูลลูกค้า — ไฟล์ตัวอย่างต้องเป็นข้อมูลสมมติ (`fixtures/`)
 - ถ้าไม่แน่ใจข้อเท็จจริง (ค่าธรรมเนียม กฎ ภาษี) ให้ค้นและอ้างแหล่ง ไม่เดา
