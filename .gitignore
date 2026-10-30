@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+*.log
+.DS_Store
+Thumbs.db
+
+# ข้อมูลร้านจริง — ห้ามขึ้น git (ใช้ fixtures/ ที่เป็นข้อมูลสมมติแทน)
+data/
+*.real.csv
